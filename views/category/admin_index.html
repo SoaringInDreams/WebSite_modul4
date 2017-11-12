@@ -1,0 +1,36 @@
+<h3>Categories</h3><br/>
+<table class="table table-striped" style="width: 400px;">
+    <?php foreach($data['category'] as $data_cat) { ?>
+        <tr>
+            <td><b><?=$data_cat['name_category']?></b></td>
+            <td align="right">
+                <a href="/admin/category/delete_category/<?=$data_cat['id_category']?>" onclick="return confirmDelete();"><button class="btn btn-sm btn-warning">delete</button></a>
+            </td>
+        </tr>
+    <?php } ?>
+</table>
+
+<br/>
+
+<div>
+    <a href="/admin/category/add_category/"><button class="btn btn-sm btn-success">New Category</button></a>
+</div>
+
+<h3>Articles</h3><br/>
+<table class="table table-striped" style="width: 400px;">
+    <?php foreach($data['articles'] as $data) { ?>
+    <tr>
+        <td><b><?=$data['title_news']?></b></td>
+        <td align="right">
+            <a href="/admin/category/edit/<?=$data['id']?>"><button class="btn btn-sm btn-primary">edit</button></a>
+            <a href="/admin/category/delete/<?=$data['id']?>" onclick="return confirmDelete();"><button class="btn btn-sm btn-warning">delete</button></a>
+        </td>
+    </tr>
+    <?php } ?>
+</table>
+
+<br/>
+
+<div>
+    <a href="/admin/category/add/"><button class="btn btn-sm btn-success">New Article</button></a>
+</div>

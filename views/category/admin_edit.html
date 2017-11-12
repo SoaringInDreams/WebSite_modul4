@@ -1,0 +1,33 @@
+<h3>Edit Article</h3><br/>
+<form method="post" action="">
+    <input type="hidden" name="id" value="<?=$data['articles']['id']?>" />
+    <div class="form-group">
+        <label for="title_news">Titel_news</label>
+        <input type="text" id="title_news" name="title_news" value="<?=$data['articles']['title_news']?>" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="category">Category</label>
+        <input type="text" id="category" name="category" value="<?=$data['articles']['category']?>" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="content_news">Content_news</label>
+        <textarea name="content_news" id="content_news" class="form-control"><?=$data['articles']['content_news']?></textarea>
+    </div>
+    <div class="form-group">
+        <label for="image_news">Image_news</label>
+        <input type="text" id="image_news" name="image_news" value="<?=$data['articles']['image_news']?>" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="date_news">Date_news</label>
+        <input type="text" id="date_news" name="date_news" value="<?=$data['articles']['date_news']?>" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="id_category">Id_category</label>
+        <input type="number" id="id_category" name="id_category" value="<?=$data['articles']['id_category']?>" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="is_published">Is_published</label>
+        <input type="checkbox" name="is_published" id="is_published"  <?php if($data['articles']['is_published'] ) { ?>checked="checked" <?php } ?> />
+    </div>
+    <input type="submit" class="btn btn-success" />
+</form>

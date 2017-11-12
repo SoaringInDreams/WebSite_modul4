@@ -1,0 +1,10 @@
+<h3><?=$data['cat']['name_category']?> </h3>
+
+
+<ul>
+    <?php foreach($data['new'] as $key=>$value){?>
+        <a href="/category/articles/<?=$value['title_news']?>"><li><?= $value['title_news'] ?></li></a>
+    <?php }?>
+</ul>
+
+
